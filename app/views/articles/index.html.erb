@@ -1,9 +1,15 @@
-<h1>Articles</h1>
-
-<ul>
-  <% @articles.each do |article| %>
+<div >
+  <h1>Articles</h1>
+  <ul class="menu">
     <li>
-      <%= link_to article.title, article %>
+      <%= link_to "Create new skill", new_article_path %>
     </li>
-  <% end %>
-</ul>
+  </ul>
+  <ul>
+    <% @articles.each do |article| %>
+      <li>
+        <%= link_to article.title, article %>
+      </li>
+    <% end %>
+  </ul>
+</div>
